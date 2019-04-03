@@ -11,7 +11,7 @@ class Authentication(BaseAuthentication):
 
         user = getattr(request._request, 'user', None)
 
-        if not user or not user.is_active:
+        if not user:
             return None
         '''TODO:进一步确认user'''
 
