@@ -10,15 +10,3 @@ class Authentication(BaseAuthentication):
 
     def authenticate(self, request):
         return request.session.get('userinfo'), None
-        # user = getattr(request._request, 'userinfo', None)
-
-        # if not user:
-        #     return None
-        # '''TODO:进一步确认user'''
-
-        # return (user, None)
-
-'''
-JulianYangjingjun
-yjj12345
-'''
