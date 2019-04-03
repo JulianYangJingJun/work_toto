@@ -1,7 +1,7 @@
 
 from django.conf import settings
 from rest_framework.authentication import BaseAuthentication
-from django.contrib import auth
+
 
 EXPIRE_MINUTES = getattr(settings, 'REST_FRAMEWORK_TOKEN_EXPIRE_MINUTES', 1)
 
