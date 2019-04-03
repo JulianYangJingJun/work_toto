@@ -9,4 +9,5 @@ EXPIRE_MINUTES = getattr(settings, 'REST_FRAMEWORK_TOKEN_EXPIRE_MINUTES', 1)
 class Authentication(BaseAuthentication):
 
     def authenticate(self, request):
-        return request.session.get('userinfo'), None
+        user = request.session.get('userinfo')
+        return user, None
