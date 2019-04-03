@@ -9,7 +9,7 @@ class Authentication(BaseAuthentication):
 
     def authenticate(self, request):
 
-        user = getattr(request._request, 'user', None)
+        user = getattr(request._request, 'userinfo', None)
 
         if not user:
             return None
