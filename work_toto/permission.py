@@ -11,3 +11,5 @@ class Permission(BasePermission):
         else:
             return False
         return bool(request.user)
+
+        
