@@ -9,7 +9,7 @@ class Permission(BasePermission):
         if remote_ip in ips:
             return True
         else:
+            if bool(request.user):
+                return True
             return False
-        return bool(request.user)
-
-        
+        # return bool(request.user)
